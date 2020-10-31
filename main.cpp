@@ -26,7 +26,7 @@ int printVec(std::vector<int> vec) {
 }
 
 int main() {
-    std::vector<int> vec(5);
+    std::vector<int> vec(20);
     int count = 0;
     int number = 0;
     bool fullSize = false;
