@@ -1,0 +1,3 @@
+C:/Users/Ana/ClionProjects/Module_016_06_003/cmake-build-debug/CMakeFiles/Module_016_06_003.dir
+C:/Users/Ana/ClionProjects/Module_016_06_003/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ana/ClionProjects/Module_016_06_003/cmake-build-debug/CMakeFiles/rebuild_cache.dir
