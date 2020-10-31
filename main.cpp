@@ -10,7 +10,48 @@
  *  чтобы совершалось как можно меньше расширений и перемещений элементов внутри вектора.
  */
 
+int updateCount(std::vector<int> vec, int value) {
+    if (value == vec.size() - 1) {
+        value = 0;
+    } else {
+        value++;
+    }
+    return value;
+}
+
+int printVec(std::vector<int> vec) {
+    for (int i = 0; i < vec.size();i++) {
+        std::cout << vec[i] << " ";
+    }
+}
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    std::vector<int> vec(5);
+    int count = 0;
+    int number = 0;
+    bool fullSize = false;
+
+    while (number != -1) {
+        std::cout << "Input your number: ";
+        std::cin >> number;
+        if (number == -1) break;
+
+        vec[count] = number;
+        if (count == vec.capacity() - 1) {
+            count = -1;
+            fullSize = true;
+        }
+        count++;
+    }
+    if (fullSize == false) {
+        vec.resize(count);
+        printVec(vec);
+    } else {
+        std::vector<int> newVec(vec.size());
+        for (int i = 0; i < newVec.size(); i++) {
+            newVec[i] = vec[count];
+            count = updateCount(vec, count);
+        }
+        printVec(newVec);
+    }
 }
